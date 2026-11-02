@@ -9,7 +9,6 @@ local groups = {
     "NormalNC",
     "NormalFloat",
     "SignColumn",
-    "CursorLine",
     "CursorColumn",
     "LineNr",
     "Folded",
@@ -30,6 +29,9 @@ local groups = {
 for _, g in ipairs(groups) do
     pcall(vim.api.nvim_set_hl, 0, g, { bg = "none" })
 end
+
+-- Subtle current-line highlight on top of the transparent background
+vim.api.nvim_set_hl(0, "CursorLine", { bg = "#292e42" })
 
 local plugin_groups = {
     "NvimTreeNormal",
