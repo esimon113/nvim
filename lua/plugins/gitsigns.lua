@@ -24,9 +24,9 @@ return {
                 return {
                     { "  ", muted },
                     { info.author, "BlameAuthor" },
-                    { ", " .. require("gitsigns.util").get_relative_time(info.author_time) .. " ⋅ ", muted },
+                    { ", " .. require("gitsigns.util").get_relative_time(info.author_time) .. " · ", muted },
                     { info.abbrev_sha, "BlameSha" },
-                    { " - " .. info.summary, muted },
+                    { " · " .. info.summary, muted },
                 }
             end,
         },
